@@ -1,6 +1,9 @@
-var OPTS, p, propagit;
+var OPTS, p, propagit, spawn;
 
 propagit = require('propagit');
+spawn = require('child_process').spawn;
+
+server = spawn('./node_modules/.bin/propagit', ['--port=7000', 'hub']);
 
 OPTS = {
   hub: '127.0.0.1:7000'
